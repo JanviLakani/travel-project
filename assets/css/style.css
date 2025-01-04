@@ -30,10 +30,10 @@ ul {
   background-color: #cc1f1f;
 }
 
-h1 {
+/* h1 {
   font-size: 5.5rem;
   margin: 8.2rem;
-}
+} */
 
 .row {
   display: flex;
@@ -119,49 +119,114 @@ h1 {
 /* ..........................headr.......... */
 
 header {
-  background-color: #c4c4c4;
+  /* background-color: #8f8c8c; */
   width: 100%;
-  padding-top: 4rem;
-  
+  padding-top: 2rem;
+  position: fixed;
+  z-index: 9999;
 }
 
-.travellerslogo {
-  width: 20rem;
-  height: 5rem;
-}
-
-header .row {
-  justify-content: space-between;
-}
-.logo img {
-  width: 100%;
-  height: 100%;
-}
-
-.right nav ul {
-  list-style-type: none;
-  
+header .container {
   display: flex;
-  column-gap: 11rem;
-  padding-top: 1.5rem;
- 
-
+  align-items: center;
 }
 
-.right nav ul li a {
-  color: white;
+header nav {
+  margin-left: auto;
+}
+
+header nav ul {
+  display: flex;
+  margin-right: 3.3rem;
+}
+
+header nav ul li {
+  margin-left: 3.3rem;
   font-size: 1.8rem;
   font-weight: 600;
-  line-height: 2.6rem;
 }
+
+header nav ul li a {
+  color: #ffffff;
+}
+
+header a {
+  margin-left: 3.3rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
 /* ........................hero............. */
 
 #hero {
-  background-color: #c4c4c4;
-  color: white;
-  height: 80vh;
+  height: 100vh;
+  margin-top: 0;
+  position: relative;
+  background-size: cover;
+  background-image: url(../image/balinese-people-traditional-clothes-religious-ceremony-pura-taman-ayun-temple-bali-indonesia.jpg);
+  /* z-index: 99999; */
+} 
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
 }
-/* .....................section1............... */
+
+.herodata{
+  /* position: absolute;
+  top: 25rem;
+  left: 25rem; */
+  padding-top: 15%;
+  color: #fff;
+  z-index: 99999;
+  position: relative;
+}
+.herodata h1{
+  font-size: 9rem;
+  line-height: 11rem;
+  font-weight: 700;
+}
+
+.herodata p {
+  font-size: 1.8rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+  padding: 2rem 0;
+}
+.herodata .homesubmit {
+font-size: 1.8rem;
+color: var(--secondary-color);
+}
+
+.submitform { 
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4rem;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  max-width: 55rem;
+  /* margin: 1.3rem 0rem; */
+ 
+}
+.submitform select{
+border: none;
+color:  gray;
+}
+
+.submitform  input[type=submit]{
+  background-color: #000;
+  border-radius: 72rem;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  cursor: pointer;
+  margin: 0.4rem 0;
+}
+
+/* .....................aboutuspack............... */
 section {
   margin-top: 15rem;
 }
@@ -428,6 +493,10 @@ section {
   font-weight: 500;
 }
 
+.starbook .yellow {
+  color: #F4BC61;
+}
+
 /* **********************Blog section**************************** */
 
 .Perfecttra {
@@ -621,16 +690,19 @@ section {
 /* ..................specialprice ............. */
 
 #specialprice {
-  background-color: #c4c4c4;
+  /* background-color: #c4c4c4; */
   background-image: url(../image/paris.jpeg);
   background-size: cover;
+  position: relative;
+  padding: 10rem 0;
+
 }
-.emaimassage {
+/* .emaimassage {
   padding: 2.3rem 19rem;
   margin-bottom: 6rem;
   border-radius: 3rem;
   border: none;
-}
+} */
 
 .Subcribeprice {
   color: white;
@@ -639,11 +711,18 @@ section {
   /* position: relative; */
 }
 
+#specialprice::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .Subcribeprice h2 {
   font-size: 6rem;
   font-weight: 600;
   line-height: 7rem;
-  padding-top: 11rem;
+  /* padding-top: 11rem; */
   padding-bottom: 2.5rem;
 }
 
@@ -651,19 +730,54 @@ section {
   font-size: 1.8rem;
   line-height: 3.4rem;
   font-weight: 500;
-}
-
-.Subcribeprice .promotion {
-  font-size: 1.8rem;
-  line-height: 3.4rem;
-  font-weight: 500;
   padding-bottom: 9.2rem;
 }
 
-.lowprices {
+
+
+/* .lowprices {
   position: absolute;
   right: 42rem;
+} */
+
+.Subcribepriceform {
+ 
+  display: flex;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4rem;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* margin: 1.3rem 0rem; */
+  max-width: 60rem;
+  border: none;
+  /* text-align: center; */
+  margin: 0 auto;
+  
 }
+/* .email-submit {
+  background-color: #000;
+  border-radius: 72rem;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  cursor: pointer;
+ 
+} */
+
+
+.Subcribepriceform .email-input {
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 2.6rem;
+  width: 45rem;
+  outline: none;
+  border: none;
+  padding: 15px 10px;
+  /* border: 0.5rem solid red; */
+}
+
+
 
 /* ...............footer1............ */
 
