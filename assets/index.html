@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css">
 
     <link
       rel="stylesheet"
@@ -21,22 +22,85 @@
         </a>
 
           <nav>
-            <ul>
+            <i class="fa-solid fa-bars menuicon" onclick="togglemenu()"></i>
+
+            <ul id="menu">
+              <i class="fa-solid fa-xmark closemenu" onclick="togglemenu()"></i>
+
               <li><a href="#">Home</a></li>
               <li><a href="#">About Us</a></li>
-              <li><a href="#">Package <i class="fa-solid fa-angle-down"></i></a></li>
-              <li><a href="#">Destination <i class="fa-solid fa-angle-down"></i></a></li>
-              <li><a href="#">Blog <i class="fa-solid fa-angle-down"></i></a></li>
+              <li>
+                <a class="Package" href="#">Package <i class="fa-solid fa-chevron-right subrigst"></i></a>
+
+                <ul class="submenu">
+                  <li><a href="#">Basic</a></li>
+                  <li><a href="#">Standard</a></li>
+                  <li>
+                    <a href="#">Premium <i class="fa-solid fa-chevron-right subsubrigst"></i></a>
+                    <ul class="subsubmenu">
+                      <li><a href="#">first-class</a></li>
+                      <li><a href="#">second-class</a></li>
+                      <li><a href="#">third-class</a></li>
+                    </ul>
+                  </li>                 
+                  <li><a href="#">Enterprise</a></li> 
+                  <li><a href="#">Custom</a></li>  
+                </ul>
+
+                
+              </li>
+              <li>
+                <a href="#">Destination <i class="fa-solid fa-chevron-right subrigst"></i></a>
+                <ul class="submenu">
+                  <li><a href="#">Manali</a></li>
+                  <li><a href="#">Bali</a></li>
+                  <li>
+                    <a href="#">Peris <i class="fa-solid fa-chevron-right subsubrigst"></i></a>
+                    <ul class="subsubmenu">
+                      <li><a href="#">Bercy</a></li>
+                      <li><a href="#">Sentier
+                      </a></li>
+                      <li><a href="#">Bastille</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Goa</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">Blog <i class="fa-solid fa-chevron-right subrigst"></i></a>
+                <ul class="submenu">
+                  <li><a href="#">January</a></li>
+                  <li>
+                    <a href="#">February <i class="fa-solid fa-chevron-right subsubrigst"></i></a>
+                    <ul class="subsubmenu">
+                      <li><a href="#">February 10</a></li>
+                      <li><a href="#">February 20</a></li>
+                      <li><a href="#">February 30</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">March</a></li>
+                  <li><a href="#">April</a></li>
+                </ul>
+              </li>
               <li><a href="#">Contact</a></li>
             </ul>
            </nav>
 
            <a href="#">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass searchicon"></i>
            </a>
           
         </div>
     </header>
+
+    <script>
+      
+      function togglemenu() {
+        document.getElementById("menu").classList.toggle
+        ("showHide")
+      }
+
+    </script>
 
     <main>
 
@@ -96,7 +160,7 @@
           </p>
 
           <div class="row aboutus">
-            <div class="col-4 work">
+            <div class="col-md-6 col-lg-4  work">
               <img src="image/a1.png" alt="a1" />
               <h3>Great team work</h3>
               <p>
@@ -106,7 +170,7 @@
                 Curabitur quis tellus a tortor egestas viverra.
               </p>
             </div>
-            <div class="col-4 vision">
+            <div class="col-md-6 col-lg-4  vision">
               <img src="image/Vector (2).png" alt="a1" />
               <h3>Our vision</h3>
               <p>
@@ -115,7 +179,7 @@
                 enim ad minim veniam.. .
               </p>
             </div>
-            <div class="col-4 mission">
+            <div class="col-md-6 col-lg-4  mission">
               <img src="image/Vector (3).png" alt="a1" />
               <h3>Our mision</h3>
               <p>
@@ -127,13 +191,13 @@
           </div>
 
           <div class="row aboutusdata">
-            <div class="col-6 rediusbox">
+            <div class="col-md-12 col-lg-6 rediusbox">
               <img
                 src="image/excited-free-couple-with-hands-up.jpg"
                 alt="redius"
               />
             </div>
-            <div class="col-6 imagedata">
+            <div class="col-md-12 col-lg-6 imagedata">
               <img src="image/Vector (4).png" alt="v4" />
               <p class="firstp">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
@@ -166,20 +230,20 @@
           </p>
 
           <div class="row Packagediscover">
-            <div class="col-5 Packageabout">
+            <div class="col-lg-7 Packageabout">
               <h2>Popular Packages</h2>
               <p>
                 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna
               </p>
             </div>
-            <div class="col-2">
+            <div class="col-5 hello">
               <a href="button" class="discover">Discover more</a>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-4">
+            <div class="col-md-6 col-lg-4">
               <div class="paris">
                 <img src="image/paris.jpeg" alt="ws" />
                 <div class="parisinfrance">
@@ -213,7 +277,7 @@
               </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-md-6 col-lg-4">
               <div class="paris">
                 <img
                   src="image/colorful-buildings-near-river-surrounded-by-mountains-lucerne-switzerland.jpg"
@@ -249,7 +313,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-6 col-lg-4">
               <div class="paris">
                 <img
                   src="image/wat-arun-temple-bangkok-thailand.jpg"
@@ -285,7 +349,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-6 col-lg-4">
               <div class="paris">
                 <img
                   src="image/beautiful-landscape-cityscape-taipei-101-building-architecture-city.jpg"
@@ -321,7 +385,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-6 col-lg-4">
               <div class="paris">
                 <img
                   src="image/balinese-people-traditional-clothes-religious-ceremony-pura-taman-ayun-temple-bali-indonesia.jpg"
@@ -357,7 +421,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-6 col-lg-4">
               <div class="row paris">
                 <img src="image/cityscape-singapore.jpg" alt="ws" />
                 <div class="parisinfrance">
@@ -401,6 +465,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
+       
 
           <div class="swiper desmyswiper">
             <div class="swiper-wrapper">
@@ -507,39 +572,45 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <div class="row">
-            <div class="col-5">
+          <div class="row rowgap">
+            <div class="col-lg-5">
               <div class="row Perfecttra">
-                <div class="col-12 PerfectTips">
-                  <h4>Perfect | Tips</h4>
-                  <h2>9 Popular Travel</h2>
-                  <h3>Destintion on Sale in 2022</h3>
-                  <h5>-</h5>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                  </p>
-
-                  <a href="" class="discover">Read More</a>
+              
+                  <div class="col-lg-12 col-md-6">
+                    <div class="PerfectTips">
+                    <h4>Perfect | Tips</h4>
+                    <h2>9 Popular Travel</h2>
+                    <h3>Destintion on Sale in 2022</h3>
+                    <h5>-</h5>
+  
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                      do eiusmod tempor incididunt ut labore et dolore magna
+                    </p>
+  
+                    <a href="" class="discover">Read More</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-6">
+                   <div class="PerfectTips">
+                    <h4>Tips | Travel</h4>
+                    <h2>How Are We Going to</h2>
+                    <h3>Travel in 2022</h3>
+                    <h5>-</h5>
+  
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                      do eiusmod tempor incididunt ut labore et dolore magna
+                    </p>
+  
+                    <a href="" class="discover">Read More</a>
+                   </div>
+                  </div>
+                
                 </div>
-                <div class="col-12 PerfectTips">
-                  <h4>Tips | Travel</h4>
-                  <h2>How Are We Going to</h2>
-                  <h3>Travel in 2022</h3>
-                  <h5>-</h5>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                  </p>
-
-                  <a href="" class="discover">Read More</a>
-                </div>
-              </div>
             </div>
 
-            <div class="col-7">
+            <div class="col-lg-7">
               <div class="blockimage">
                 <div class="Storiesimg">
                   <img
@@ -571,7 +642,7 @@
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div class="row">
-            <div class="col-5 traform">
+            <div class="col-xl-5 traform">
               <form action="con" class="contectform">
                 <input type="text" placeholder="Your Name" name="yname" />
                 <br />
@@ -585,14 +656,14 @@
                 <br />
                 <br />
 
-                <textarea name="massage"id="" placeholder="Your Massage" cols="60" rows="8"></textarea>
+                <textarea name="massage"id="" placeholder="Your Massage" cols="51" rows="8" ></textarea>
 
                 <a href="uyu" class="discover massageto">Send Massge</a>
               </form>
               
 
             </div>
-            <div class="col-7 dataform">
+            <div class="col-xl-7 dataform">
              <div class="getintouch">
               <h2 >Get In Touch</h2>
               <p>
@@ -602,7 +673,7 @@
 
              </div>
               <div class="row">
-                <div class="col-6 tripaddress">
+                <div class="col-md-6 col-sm-12 tripaddress">
                   <h2>Lhoksemawe, Aceh</h2>
                   <ul>
                     <li><i class="fa-solid fa-phone hi"></i>+62 6943 6956</li>                    
@@ -611,7 +682,7 @@
                   </ul>
                 </div>
 
-                <div class="col-6 tripaddress">
+                <div class="col-md-6 col-sm-12 tripaddress">
                   <h2>Lhoksemawe, Aceh</h2>
                   <ul>
                     <li><i class="fa-solid fa-phone hi"></i> +62 6943 6956</li>
@@ -620,7 +691,7 @@
                   </ul>
                 </div>
 
-                <div class="col-6 tripaddress">
+                <div class="col-md-6 col-sm-12 tripaddress">
                   <h2>Lhoksemawe, Aceh</h2>
                   <ul>
                     <li><i class="fa-solid fa-phone hi"></i> +62 6943 6956</li>
@@ -629,7 +700,7 @@
                   </ul>
                 </div>
                 
-                <div class="col-6 tripaddress">
+                <div class="col-md-6 col-sm-12 tripaddress">
                   <h2>Lhoksemawe, Aceh</h2>
                   <ul>
                     <li><i class="fa-solid fa-phone hi"></i> +62 6943 6956</li>
@@ -640,6 +711,55 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="Gallerymoment">
+        <div class="container">
+          <h4 >Gallery</h4>
+          <h2>Unforgettable moment</h2>
+          <div class="row rowposition">
+            <div class="col-lg-6 col-md-12 col-12">
+              <div class="baliimage">
+                <h3>Bali</h3>
+
+              </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12 col-12">
+              <div class="row gallerymom">
+                <div class="col-md-12 col-sm-12">
+                  <div class="dubaiimage">
+                    <h3>Dubai</h3>
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                  <div class="parisimgs">
+                    <h3>Paris</h3>
+
+                  </div>
+                 
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="italyimgs">
+                    <h3>Italy</h3>
+
+                  </div>
+                
+                </div>
+
+              </div>
+             
+              </div>
+
+            
+
+
+          </div>
+
         </div>
       </section>
 
@@ -660,36 +780,54 @@
            
           </div>
         </div>
-      </section>
+      <!-- </section>
+      <section id="RiceTerraces-Bali">
+        <div class="container">
+          <div class="row">
+            <div class="col-8">
+              <h2>
+                Rice Terraces, Bali
+              </h2>
+              <h4>
+                <i class="fa-solid fa-location-dot"></i> Jl. Raya Tegallalang, Bali
+              </h4>
+
+            </div>
+            <div class="col-4">
+
+            </div>
+          </div>
+
+        </div>
+
+      </section> -->
     </main>
 
 
-    <footer id="tracontectus">
+    <footer>
      <div class="container">
-      <div class="traveller">
-        <div class="col-3 tralogo">
+      <div class="row traveller">
+        <div class="col-lg-3 col-md-6 col-sm-12 tralogo">
           <img src="image/Logo.png" alt="fgfg" />
         </div>
-        <div class="col-3 tralogo">
+        <div class="col-lg-3 col-md-6 col-sm-12 tralogo">
           <h2>Contact Information</h2>
           <ul>
             <li>
-              <!-- <a href="dd"><i class="fa-solid fa-location-dot"></i></a>
-              <a href="se">732 Despard St, Atlanta</a> -->
               <a href="#"><i class="fa-solid fa-location-dot hi"></i> dascascass  </a>
             </li>
             <li>
               <a href="#"><i class="fa-solid fa-envelope hi"></i>+97 888 8888</a>
-              <!-- <a href="se">+97 888 8888</a> -->
+             
             </li>
 
             <li>
               <a href="#"><i class="fa-solid fa-phone hi"></i>info@traveller.com</a>
-              <!-- <a href="se">info@traveller.com</a> -->
+             
             </li>
           </ul>
         </div>
-        <div class="col-2 tralogo">
+        <div class="col-lg-2 col-md-6 col-sm-12 tralogo">
           <h2>Quick Link</h2>
           <ul>
             <li><a href="#">Home</a></li>
@@ -699,7 +837,7 @@
           </ul>
         </div>
 
-        <div class="col-2 tralogo">
+        <div class="col-lg-2 col-md-6 col-sm-12 tralogo">
           <h2>Follow Us</h2>
           <div class="iconfour">
   

@@ -106,6 +106,10 @@ ul {
   color: var(--primary-color);
 }
 
+.hello {
+  text-align: right;
+}
+
 .sub-title {
   font-size: 1.8rem;
   font-weight: 500;
@@ -135,13 +139,12 @@ header nav {
   margin-left: auto;
 }
 
-header nav ul {
+header nav > ul {
   display: flex;
-  margin-right: 3.3rem;
+  /* margin-right: 3.3rem; */
 }
 
-header nav ul li {
-  margin-left: 3.3rem;
+header nav ul li a {
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -150,40 +153,183 @@ header nav ul li a {
   color: #ffffff;
 }
 
-header a {
-  margin-left: 3.3rem;
+header nav > ul > li > a {
+  margin: 0 3.3rem;
   font-size: 1.8rem;
   color: #ffffff;
 }
 
+.searchicon {
+  color: white;
+  font-size: 17px;
+}
+
+/* ........................headerba............. */
+
+header nav > ul > li {
+  position: relative;
+}
+
+li:hover .submenu {
+  display: block;
+}
+
+li:hover .subrigst {
+  transform: rotate(90deg);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 28px;
+  background-color: rgba(69, 207, 69, 0.2);
+  z-index: 1000;
+  width: 150px;
+}
+.submenu li {
+  margin: 0%;
+}
+
+.submenu li a {
+  display: block;
+}
+
+.submenu > li {
+  position: relative;
+}
+
+.subsubmenu {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  background-color: rgba(167, 18, 139, 0.2);
+  z-index: 1000;
+  width: 150px;
+}
+
+.submenu li:hover .subsubmenu {
+  display: block;
+}
+
+.submenu li:hover .subsubrigst {
+  transform: rotate(90deg);
+}
+
+.submenu li:hover {
+  color: white;
+  background-color: rgba(209, 35, 22, 0.2);
+}
+
+nav ul > li > a:hover {
+  color: #00b6f1;
+}
+
+ul li:hover > a {
+  /* background-color: #9dd2e4; */
+  color: #fff;
+}
+
+.menuicon , .closemenu {
+
+
+  color: white;
+  font-size: 20px;
+  display: none;
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 991px) {
+  header nav > ul {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -35%;
+    background-color: rgb(52, 120, 209);
+    width: 35%;
+    height: 100%;
+    transition: all 1S;
+  }
+
+
+  .submenu {
+    position: relative;
+    top: 0;
+    left: 30px;
+    /* padding: 0 20px; */
+    background-color: transparent;
+   
+  }
+
+  .subsubmenu {
+    position: relative;
+    top: 0;
+    left: 20px;
+    /* background-color: none; */
+    background-color: transparent;
+    /* padding: 0 20px; */
+    /* width: 0; */
+  }
+
+  .showHide {
+    right: 0;
+  }
+
+ 
+
+  header nav > ul > li > a {
+    margin: 0 15px;
+
+  }
+
+  .menuicon , .closemenu{
+    display: block;
+  }
+
+  
+}
+
+
+/* ..................headerbar finish........ */
+
 /* ........................hero............. */
 
 #hero {
-  height: 100vh;
+  height: 90vh;
   margin-top: 0;
   position: relative;
   background-size: cover;
   background-image: url(../image/balinese-people-traditional-clothes-religious-ceremony-pura-taman-ayun-temple-bali-indonesia.jpg);
   /* z-index: 99999; */
-} 
+}
 
 #hero::before {
+
+
   content: "";
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.3);
+
+
 }
 
-.herodata{
+.herodata {
   /* position: absolute;
   top: 25rem;
   left: 25rem; */
   padding-top: 15%;
   color: #fff;
-  z-index: 99999;
+  /* z-index: 99999; */
   position: relative;
 }
-.herodata h1{
+.herodata h1 {
   font-size: 9rem;
   line-height: 11rem;
   font-weight: 700;
@@ -196,11 +342,11 @@ header a {
   padding: 2rem 0;
 }
 .herodata .homesubmit {
-font-size: 1.8rem;
-color: var(--secondary-color);
+  font-size: 1.8rem;
+  color: var(--secondary-color);
 }
 
-.submitform { 
+.submitform {
   background-color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 4rem;
@@ -209,14 +355,13 @@ color: var(--secondary-color);
   /* align-items: center; */
   max-width: 55rem;
   /* margin: 1.3rem 0rem; */
- 
 }
-.submitform select{
-border: none;
-color:  gray;
+.submitform select {
+  border: none;
+  color: gray;
 }
 
-.submitform  input[type=submit]{
+.submitform input[type="submit"] {
   background-color: #000;
   border-radius: 72rem;
   border: none;
@@ -238,6 +383,8 @@ section {
 .aboutus {
   text-align: center;
   margin-bottom: 8rem;
+  justify-content: center;
+  row-gap: 3rem;
 }
 
 .col-4 h3 {
@@ -258,12 +405,51 @@ section {
   padding-right: 2.6rem;
 }
 
+.work h3 {
+  font-size: 4.8rem;
+  line-height: 7rem;
+  font-weight: 600;
+}
+
+.work p {
+  font-size: 1.8rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
 .vision {
   padding: 0 2.6rem 0 2.6rem;
 }
 
+.vision h3 {
+  font-size: 4.8rem;
+  line-height: 7rem;
+  font-weight: 600;
+}
+
+.vision p {
+  font-size: 1.8rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
 .mission {
   padding-left: 2.6rem;
+}
+
+.mission h3 {
+  font-size: 4.8rem;
+  line-height: 7rem;
+  font-weight: 600;
+}
+
+.mission p {
+  font-size: 1.8rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+  color: var(--secondary-color);
 }
 
 /* .aboutusdata {
@@ -344,6 +530,7 @@ section {
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 6.6rem;
+  row-gap: 3rem;
 }
 
 .paris img {
@@ -494,18 +681,38 @@ section {
 }
 
 .starbook .yellow {
-  color: #F4BC61;
+  color: #f4bc61;
 }
 
 /* **********************Blog section**************************** */
+/* 
+
+
+/* .Perfecttra {
+  row-gap: 2rem;
+}  */
 
 .Perfecttra {
   row-gap: 2rem;
 }
+
+.pratips1 {
+  margin-right: 1rem;
+}
+
+.pratips2 {
+  margin-left: 1rem;
+}
+
+.rowgap {
+  row-gap: 2rem;
+}
+
 .PerfectTips {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-  padding: 1.2rem 1.8rem 4.5rem 2.6rem;
+  padding: 2rem 1.8rem 5.8rem 2.6rem;
   text-align: left;
+  margin: 0 1rem;
 }
 
 .TipsTravel {
@@ -576,8 +783,8 @@ section {
 } */
 
 .Storiesimg {
-  width: 76.5rem;
-  height: 67rem;
+  width: 100%;
+  height: 74rem;
 }
 
 .Storiesimg img {
@@ -591,8 +798,8 @@ section {
 
 .Storiesdata {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-  padding: 1.2rem 1.8rem 4.5rem 2.6rem;
-  text-align: left;
+  padding: 2.2rem 1.8rem 6rem 2.6rem;
+  /* text-align: left; */
 }
 
 .Storiesdata h4 {
@@ -602,7 +809,7 @@ section {
 }
 
 .Storiesdata h2 {
-  font-size: 3.6rem;
+  font-size: 3rem;
   font-weight: 500;
   line-height: 5.1rem;
 }
@@ -633,15 +840,17 @@ section {
 }
 
 .contectform textarea {
-  padding: 0.5rem 0 0 0.4rem;
+  /* padding: 0.5rem 0 0 0.4rem; */
   margin-bottom: 3rem;
   border-radius: 0.5rem;
   border: 0.1rem solid #dfdfdf;
+  width: 100%;
 }
 
 .massageto {
-  padding: 1rem 17rem;
+  /* padding: 1rem 14rem; */
   margin-top: 6rem 0;
+  width: 100%;
 }
 
 .contecttouch {
@@ -686,7 +895,120 @@ section {
   color: #000000;
   padding: 1rem 0;
 }
+/* ......................gallaery section................... */
+#Gallerymoment {
+  color: white;
+  /* z-index: 999999;
+  position: relative; */
+}
 
+/* .gallerymom {
+  row-gap: 1rem;
+} */
+
+#Gallerymoment h4 {
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 7rem;
+  color: var(--secondary-color);
+}
+
+#Gallerymoment h2 {
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 7rem;
+  padding-bottom: 7.9rem;
+  color: black;
+}
+
+#Gallerymoment h3 {
+  line-height: 7rem;
+  font-size: 3.6rem;
+  font-weight: 500;
+  position: absolute;
+  bottom: -1rem;
+  left: 1.5rem;
+}
+
+/* .rowposition {
+  padding-top: 15%;
+  color: #fff;
+  z-index: 99999;
+  position: relative;
+} */
+
+.rowposition {
+  row-gap: 1rem;
+}
+
+.baliimage {
+  background-image: url(../image/tree-house-diamond-beach-nusa-penida-island-bali-indonesia.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 67.6rem;
+  margin-right: 1rem;
+  position: relative;
+  z-index: 9999999;
+}
+
+.baliimage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dubaiimage {
+  background-image: url(../image/top-view-dubai.jpg);
+  background-size: cover;
+  /* width: 100%; */
+  height: 32.8rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 9999999;
+}
+
+.dubaiimage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.parisimgs {
+  height: 33.9rem;
+  background-image: url(../image/cityscape-paris-sunlight-blue-sky-fra.jpg);
+  background-size: cover;
+  margin-right: 1rem;
+  position: relative;
+  z-index: 9999999;
+}
+
+.parisimgs::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.italyimgs {
+  height: 33.9rem;
+  background-image: url(../image/white-yacht-pier-near-town-daytime.jpg);
+  background-size: cover;
+  position: relative;
+  z-index: 9999999;
+}
+
+.italyimgs::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ''''''''''''''''''''''''gallery..........finished...... */
 /* ..................specialprice ............. */
 
 #specialprice {
@@ -695,7 +1017,6 @@ section {
   background-size: cover;
   position: relative;
   padding: 10rem 0;
-
 }
 /* .emaimassage {
   padding: 2.3rem 19rem;
@@ -712,7 +1033,7 @@ section {
 }
 
 #specialprice::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.3);
@@ -723,7 +1044,7 @@ section {
   font-weight: 600;
   line-height: 7rem;
   /* padding-top: 11rem; */
-  padding-bottom: 2.5rem;
+  /* padding-bottom: 2.5rem; */
 }
 
 .Subcribeprice p {
@@ -733,15 +1054,12 @@ section {
   padding-bottom: 9.2rem;
 }
 
-
-
 /* .lowprices {
   position: absolute;
   right: 42rem;
 } */
 
 .Subcribepriceform {
- 
   display: flex;
   background-color: #fff;
   padding: 0.5rem 1rem;
@@ -753,8 +1071,8 @@ section {
   border: none;
   /* text-align: center; */
   margin: 0 auto;
-  
 }
+
 /* .email-submit {
   background-color: #000;
   border-radius: 72rem;
@@ -764,7 +1082,6 @@ section {
   cursor: pointer;
  
 } */
-
 
 .Subcribepriceform .email-input {
   background-color: white;
@@ -777,22 +1094,26 @@ section {
   /* border: 0.5rem solid red; */
 }
 
-
-
 /* ...............footer1............ */
 
-#tracontectus {
+/* #tracontectus {
   padding: 9rem 0rem;
   color: #000000;
+} */
+
+footer {
+  padding: 11rem 0;
 }
+
 .traveller {
   justify-content: space-between;
   display: flex;
+  row-gap: 3rem;
 }
 
 .tralogo h2 {
   font-size: 2.4rem;
-  line-height: 7rem;
+  /* line-height: 7rem; */
   font-weight: 600;
 }
 
