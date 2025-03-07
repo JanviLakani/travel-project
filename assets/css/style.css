@@ -261,7 +261,7 @@ ul li:hover > a {
   .submenu {
     position: relative;
     top: 0;
-    left: 30px;
+    /* left: 30px; */
     /* padding: 0 20px; */
     background-color: transparent;
    
